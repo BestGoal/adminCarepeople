@@ -4,16 +4,10 @@ import Sidebar from "./components/menu/vertical-menu/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { connect } from "react-redux";
-import {
-	changeMode,
-	collapseSidebar,
-	changeNavbarColor,
-	changeNavbarType,
-	changeFooterType,
-	changeMenuColor,
-	hideScrollToTop
-} from "../redux/actions/customizer/index";
 import PerfectScrollbar from "react-perfect-scrollbar"
+import {
+	collapseSidebar,
+} from "../redux/actions/customizer/index";
 
 class VerticalLayout extends PureComponent {
 	state = {
@@ -268,11 +262,5 @@ const mapStateToProps = state => {
 	};
 };
 export default connect(mapStateToProps, {
-	changeMode,
 	collapseSidebar,
-	changeNavbarColor,
-	changeNavbarType,
-	changeFooterType,
-	changeMenuColor,
-	hideScrollToTop
 })(VerticalLayout);

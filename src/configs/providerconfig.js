@@ -17,8 +17,12 @@ export const pagenation_set =[
 
 export  const status_options = [
     { value: "allow", label: "allow" },
-    { value: "pending", label: "pending" },
     { value: "block", label: "block" },
+];
+
+export  const worker_status_options = [
+    { value: "approve", label: "approve" },
+    { value: "unapprove", label: "unapprove" },
 ];
 
 export const countryList = [

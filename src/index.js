@@ -27,17 +27,17 @@ import 'react-date-range/dist/theme/default.css';
 import 'bootstrap-daterangepicker/daterangepicker.css'
 
 const renderApp = preloadedState => {
-  const store = configureStore(preloadedState);
-  ReactDOM.render(
-      <Provider store={store}>
-        <Suspense fallback={<Spinner />}>
-          <Layout>
-            <Router />
-          </Layout>
-        </Suspense>
-      </Provider>,
-    document.getElementById("root")
-  );
+	const store = configureStore(preloadedState);
+	ReactDOM.render(
+		<Provider store={store}>
+			<Suspense fallback={<Spinner />}>
+				<Layout>
+					<Router />
+				</Layout>
+			</Suspense>
+		</Provider>,
+		document.getElementById("root")
+	);
 }
 
 (async () => renderApp(await sessionCheck()))();

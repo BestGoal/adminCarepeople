@@ -5,14 +5,6 @@ import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import PerfectScrollbar from "react-perfect-scrollbar"
 import { connect } from "react-redux"
-import {
-	changeNavbarColor,
-	changeNavbarType,
-	changeFooterType,
-	changeMenuColor,
-	hideScrollToTop,
-	changeMode
-} from "../redux/actions/customizer/index"
 
 class HorizontalLayout extends PureComponent {
 	state = {
@@ -244,10 +236,4 @@ const mapStateToProps = state => {
 	}
 }
 export default connect(mapStateToProps, {
-	changeNavbarColor,
-	changeNavbarType,
-	changeFooterType,
-	changeMenuColor,
-	hideScrollToTop,
-	changeMode
 })(HorizontalLayout)

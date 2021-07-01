@@ -5,7 +5,7 @@ import * as Icon from "react-feather"
 class NavbarBookmarks extends React.PureComponent {
 
 	render() {
-		let { sidebarVisibility, } = this.props
+		let { sidebarVisibility } = this.props
 
 		return (
 			<div className="mr-auto float-left bookmark-wrapper d-flex align-items-center">

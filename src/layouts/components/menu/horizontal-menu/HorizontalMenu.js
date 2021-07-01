@@ -10,7 +10,53 @@ import { ChevronDown, ChevronRight } from "react-feather"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { history } from "../../../../history"
-// import HappyIcon from "../../../../configs/icon"
+
+import * as Icon from "react-feather"
+
+const mainSidebar = [
+  {
+    id: "My Profile",
+    title: "My Profile",
+    type: "collapse",
+    navLink: "/profile/information",
+    icon: <Icon.User size={20} />,
+    badge: "warning",
+    children: [
+      {
+        id: "Profileinformation",
+        title: "Profile Information",
+        type: "item",
+        icon: <Icon.Circle size={12} />,
+        navLink: "/profile/information"
+      },
+      {
+        id: "Changepassword",
+        title: "Change Password",
+        type: "item",
+        icon: <Icon.Circle size={12} />,
+        navLink: "/profile/change-password"
+      },
+    ]
+  },
+  {
+    id: "My Wallet",
+    title: "My Wallet",
+    type: "collapse",
+    navLink: "/wallet/deposit",
+    icon: <Icon.Monitor size={20} />,
+    badge: "warning",
+    children: [
+      {
+        id: "walletdeposit",
+        title: "Wallet Deposit",
+        type: "item",
+        icon: <Icon.Circle size={12} />,
+        navLink: "/wallet/deposit"
+      }
+    ]
+  }
+]
+
 
 class HorizontalSidebar extends React.Component {
   constructor(props) {
@@ -128,7 +174,7 @@ class HorizontalSidebar extends React.Component {
           }
         }}>
         {submenu.map(child => {
-          const CustomAnchorTag = child.type === "external-link" ? `a`: Link
+          const CustomAnchorTag = child.type === "external-link" ? `a` : Link
           if (child.navLink && child.navLink === this.props.activePath) {
             this.activeFlag = true
             this.updateParentItems(id)
@@ -154,25 +200,25 @@ class HorizontalSidebar extends React.Component {
                     ),
                     disabled: child.disabled
                   })}
-                  tag={child.navLink ? CustomAnchorTag: "div"}
+                  tag={child.navLink ? CustomAnchorTag : "div"}
                   to={
                     child.filterBase
                       ? child.filterBase
-                     : child.navLink && child.type === "item"
-                      ? child.navLink
-                     : "#"
+                      : child.navLink && child.type === "item"
+                        ? child.navLink
+                        : "#"
                   }
                   href={
-                    child.type === "external-link" ? child.navLink: undefined
+                    child.type === "external-link" ? child.navLink : undefined
                   }
-                  target={child.newTab ? "_blank": undefined}
+                  target={child.newTab ? "_blank" : undefined}
                   onMouseEnter={() => this.handleItemHover(child.id)}
                   onMouseLeave={() => this.handleItemHover(null)}>
                   {child.children ? (
                     <Dropdown
                       className={classnames("sub-menu w-100", {})}
                       isOpen={this.state.openDropdown.includes(child.id)}
-                      direction={this.state.openLeft ? "left": "right"}
+                      direction={this.state.openLeft ? "left" : "right"}
                       toggle={() => true}
                       onMouseEnter={() => this.openDropdown(child.id)}
                       onMouseLeave={() => this.closeDropdown(child.id)}>
@@ -184,9 +230,9 @@ class HorizontalSidebar extends React.Component {
                           <span className="menu-icon align-bottom mr-1">
                             {/* {HappyIcon[child.icon]} */}
                           </span>
-                          
+
                           {child.title}
-                          
+
                         </div>
                         <ChevronRight
                           className="has-sub-arrow align-middle ml-50"
@@ -195,12 +241,12 @@ class HorizontalSidebar extends React.Component {
                       </DropdownToggle>
                       {child.children
                         ? this.renderSubMenu(child.children, child.id)
-                       : null}
+                        : null}
                     </Dropdown>
-                  ): (
+                  ) : (
                     <div className="item-content">
                       <span className="menu-icon align-top mr-1">
-                      {/* {HappyIcon[child.icon]} */}
+                        {/* {HappyIcon[child.icon]} */}
                       </span>
                       <span className="menu-title align-middle">
                         {child.title}
@@ -244,7 +290,7 @@ class HorizontalSidebar extends React.Component {
         this.activeFlag = true
         this.updateParentItems(item.id, true)
       }
-      const CustomAnchorTag = item.type === "external-link" ? `a`: Link
+      const CustomAnchorTag = item.type === "external-link" ? `a` : Link
       return (
         <li
           className={classnames("nav-item", {
@@ -273,13 +319,13 @@ class HorizontalSidebar extends React.Component {
                 <DropdownToggle className="d-flex align-items-center" tag="div">
                   <div className="dropdown-text">
                     <span className="menu-icon align-middle mr-75">
-                    {/* {HappyIcon[item.icon]} */}
+                      {/* {HappyIcon[item.icon]} */}
                     </span>
                     <span className="menu-title align-middle">
-                      
-                     
-                    {item.title}
-                    
+
+
+                      {item.title}
+
                     </span>
                   </div>
                   <ChevronDown className="ml-50 align-bottom" size={15} />
@@ -288,9 +334,9 @@ class HorizontalSidebar extends React.Component {
                 {this.updateParentItems(item.id, true)}
                 {item.children
                   ? this.renderSubMenu(item.children, item.id)
-                 : null}
+                  : null}
               </Dropdown>
-            ): (
+            ) : (
               <CustomAnchorTag
                 className={classnames({
                   "nav-link": item.type === "item",
@@ -299,20 +345,20 @@ class HorizontalSidebar extends React.Component {
                 to={
                   item.filterBase
                     ? item.filterBase
-                   : item.navLink && item.type === "item"
-                    ? item.navLink
-                   : "#"
+                    : item.navLink && item.type === "item"
+                      ? item.navLink
+                      : "#"
                 }
-                href={item.type === "external-link" ? item.navLink: undefined}
-                target={item.newTab ? "_blank": undefined}>
+                href={item.type === "external-link" ? item.navLink : undefined}
+                target={item.newTab ? "_blank" : undefined}>
                 <span className="menu-icon align-middle mr-75">
-                  
-                {/* {HappyIcon[item.icon]} */}
+
+                  {/* {HappyIcon[item.icon]} */}
                 </span>
                 <span className="menu-title align-middle">
-                
+
                   {item.title}
-                  
+
                 </span>
               </CustomAnchorTag>
             )}
@@ -340,7 +386,7 @@ class HorizontalSidebar extends React.Component {
           )}>
           <div className="navbar-container main-menu-content">
             <ul className="nav navbar-nav" id="main-menu-navigation">
-              {this.props.sidebar?this.renderDropdown(this.props.sidebar):null}
+              {mainSidebar ? this.renderDropdown(mainSidebar) : null}
             </ul>
           </div>
         </div>
@@ -350,7 +396,6 @@ class HorizontalSidebar extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    sidebar: state.auth.sidebar,
     currentUser: state.auth.userRole
   }
 }

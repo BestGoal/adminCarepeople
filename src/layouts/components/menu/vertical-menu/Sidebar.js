@@ -182,25 +182,21 @@ class Sidebar extends Component {
                       dir === "rtl" ? "DIRECTION_RIGHT": "DIRECTION_LEFT"
                     }>
                     <ul className="navigation navigation-main">
-                      {
-                        this.props.sidebar && this.props.sidebar.length > 0 ?
-                        <SideMenuContent
-                          hoverIndex={hoveredMenuItem}
-                          setActiveIndex={this.changeActiveIndex}
-                          activeIndex={activeIndex}
-                          handleSidebarMouseEnter={this.handleSidebarMouseEnter}
-                          activeItemState={activeItem}
-                          handleActiveItem={this.handleActiveItem}
-                          activePath={activePath}
-                          lang={currentLang}
-                          permission={permission}
-                          currentUser={currentUser}
-                          collapsedMenuPaths={collapsedMenuPaths}
-                          toggleMenu={sidebarVisibility}
-                          deviceWidth={this.props.deviceWidth}
-                        />
-                       : null
-                      }
+                      <SideMenuContent
+                        hoverIndex={hoveredMenuItem}
+                        setActiveIndex={this.changeActiveIndex}
+                        activeIndex={activeIndex}
+                        handleSidebarMouseEnter={this.handleSidebarMouseEnter}
+                        activeItemState={activeItem}
+                        handleActiveItem={this.handleActiveItem}
+                        activePath={activePath}
+                        lang={currentLang}
+                        permission={permission}
+                        currentUser={currentUser}
+                        collapsedMenuPaths={collapsedMenuPaths}
+                        toggleMenu={sidebarVisibility}
+                        deviceWidth={this.props.deviceWidth}
+                      />
                     </ul>
                   </Hammer>
                 </ScrollbarTag>

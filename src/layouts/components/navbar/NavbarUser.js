@@ -2,38 +2,26 @@ import React from "react"
 import { UncontrolledDropdown, DropdownToggle } from "reactstrap"
 import { connect } from "react-redux"
 import { Users } from "react-feather"
-import Media from "react-media";
 import UserDropdown from './Userdropdown'
 import { Root } from "../../../authServices/rootconfig";
-import Clock from "./Clock"
 
 class NavbarUser extends React.PureComponent {
 
 	render() {
-		let playerData = this.props.player;
+		// let playerData = this.props.player;
 		let userData = this.props.user;
 
 		return (
 			<ul className="nav navbar-nav navbar-nav-user float-right">
-				<div className='d-flex flex-column justify-content-center align-items-center'>
+				{/* <div className='d-flex flex-column justify-content-center align-items-center'>
 					<div className="font-weight-bold d-block color-white">{`Balance ${playerData.balance} €`}</div>
 					<div className="font-weight-bold color-white">{`BonusBalance ${playerData.bonusbalance} €`}</div>
-				</div>
-
-				<Media queries={{ Tablet: "(min-width: 768px)" }}>
-					{matches => (
-						<>
-							{matches.Tablet &&
-								<Clock />
-							}
-						</>
-					)}
-				</Media>
+				</div> */}
 
 				<UncontrolledDropdown tag="li" className="dropdown-user nav-item">
 					<DropdownToggle tag="a" className="nav-link dropdown-user-link">
 						<div className="user-nav d-sm-flex d-none">
-							<span className="user-name text-bold-600 color-white">
+							<span className="user-name text-bold-600">
 								{userData.email}
 							</span>
 						</div>
