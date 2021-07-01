@@ -1,0 +1,15 @@
+@import "./bootstrap.scss";
+@import "./components.scss";
+@import "./bootstrap-extended.scss";
+@import "./colors.scss";
+@import "./iconfont.scss";
+@import "./custom-rtl.scss";
+@import "./login.scss";
+@import "./loading.scss";
+
+
+
+[dir] .main-menu.menu-light .navigation li.has-sub ul.menu-content{
+    padding: 7px !important;
+    margin: -7px -7px 0 5px !important; 
+}

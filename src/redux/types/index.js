@@ -1,0 +1,93 @@
+// homepage loading
+export const HOMEPAGELOADIN = "HOMEPAGELOADIN"
+
+// after user login
+export const PROFILE_USER = "PROFILE_USER"
+
+// user admin sidebar
+export const SIDEVAR_DATA = "SIDEVAR_DATA"
+
+// user balance update event
+export const GETBALANCE = "GETBALANCE"
+
+// user theme info
+export const THEMSET = "THEMSET"
+
+// agent, user permission
+export const PERMISSIONLOAD = "PERMISSIONLOAD"
+
+// agent, all agent
+export const PERMISSION_LOAD = "PERMISSION_LOAD"
+export const USER_GET_DATA = "USER_GET_DATA"
+export const USER_SUB_PERMISSION = "USER_SUB_PERMISSION"
+// agent tree
+export const AGENT_TREE_DATA = "AGENT_TREE_DATA"
+export const AGENT_TREE_PLAYER_DATA = "AGENT_TREE_PLAYER_DATA"
+// agent profile
+export const AGENT_PROFILE = "AGENT_PROFILE"
+// agent provider
+export const AGENT_DATAF_PROVIDER = "AGENT_DATAF_PROVIDER"
+export const AGENT_PROVIDER_MANAGE = "AGENT_PROVIDER_MANAGE"
+
+// player . all player
+export const PLAYERS_GET_DATA = "PLAYERS_GET_DATA"
+export const PLAYERS_FILTER_DATA = "PLAYERS_FILTER_DATA"
+export const AGENT_SELECTED_PROVIDER = "AGENT_SELECTED_PROVIDER"
+export const PLAYERS_SET_PAGENATION = "PLAYERS_SET_PAGENATION"
+
+// player profile
+export const PLAYER_PROFILE = "PLAYER_PROFILE"
+
+// config permission
+export const USERPERMISSION = "USERPERMISSION"
+
+// config system
+export const ALLGAMETYPES = "ALLGAMETYPES" 
+
+export const GAMEPROVIDERLOAD = "GAMEPROVIDERLOAD" 
+export const GAMEPROVIDERGET = "GAMEPROVIDERGET" 
+export const GAMEPROVIDERFILTER = "GAMEPROVIDERFILTER" 
+
+// config game
+export const ALLGAMEPROVIDER = "ALLGAMEPROVIDER" 
+export const FILTERGAMETYPES = "FILTERGAMETYPES" 
+export const FILTERGAMEPROVIDERS = "FILTERGAMEPROVIDERS" 
+export const FILTERGAMES = "FILTERGAMES"
+
+// config bonus
+export const BONUSLOAD = "BONUSLOAD"
+export const BONUSGET = "BONUSGET"
+
+// cms slider
+export const ALLSLIDERITEMS = "ALLSLIDERITEMS"
+
+// jackpot
+export const JACKPOT_AGENT_DATA = "JACKPOT_AGENT_DATA"
+export const JACKPOT_PLAYER_DATA = "JACKPOT_PLAYER_DATA"
+
+// register agent transaction history
+export const REPORT_BIG_PROVIDER_LIST = "REPORT_BIG_PROVIDER_LIST"
+export const REPORT_PROVIDER_LIST = "REPORT_PROVIDER_LIST"
+export const REPORT_GAME_LIST = "REPORT_GAME_LIST"
+export const REPORT_AGENT_LIST = "REPORT_AGENT_LIST"
+export const REPORT_AGENT_GAME_DATA = "REPORT_AGENT_GAME_DATA"
+export const REPORT_AGENT_GAME_TOTAL_DATA = "REPORT_AGENT_GAME_TOTAL_DATA"
+export const REPORT_AGENT_TRANSACTION = "REPORT_AGENT_TRANSACTION"
+export const REPORT_AGENT_TRANSACTION_TOTAL_DATA = "REPORT_AGENT_TRANSACTION_TOTAL_DATA"
+export const REPORT_AGENT_LOGIN = "REPORT_AGENT_LOGIN"
+
+// register player transaction history
+export const REPORT_PLAYER_LIST = "REPORT_PLAYER_LIST"
+export const REPORT_PLAYER_BET_HISTORY = "REPORT_PLAYER_BET_HISTORY"
+export const REPORT_PLAYER_TOTAL_DATA = "REPORT_PLAYER_TOTAL_DATA"
+export const REPORT_PLAYER_TRANSACTION = "REPORT_PLAYER_TRANSACTION"
+export const REPORT_PLAYER_TRANSACTION_ALLDATA = "REPORT_PLAYER_TRANSACTION_ALLDATA"
+export const REPORT_PLAYER_BET_ALLDATA = "REPORT_PLAYER_BET_ALLDATA"
+export const REPORT_PLAYER_BET = "REPORT_PLAYER_BET"
+export const REPORT_PLAYER_LOGIN = "REPORT_PLAYER_LOGIN"
+
+// sidebar permission
+export const PERMISSION_LOAD_LIST = "PERMISSION_LOAD_LIST"
+
+// dashboard
+export const DASHBOARD_UPDATE = "DASHBOARD_UPDATE"
